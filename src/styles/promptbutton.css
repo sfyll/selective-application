@@ -34,11 +34,18 @@
     flex-direction: row;
     align-items: center;
     width: 100%;
-    max-width: 400px;
     margin: 0 auto;
     border-radius: 2px;
     padding: 1.4rem 2rem 1.6rem;
     background: rgba(57, 63, 84, 0.8);
+    max-width: 400px; 
+    min-width: 300px; 
+}
+
+@media (min-width: 1024px) {
+    .webflow-style-input {
+        max-width: 30vw;
+    }
 }
 
 .webflow-style-input:after {
