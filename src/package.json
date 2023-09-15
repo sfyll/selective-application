@@ -1,0 +1,37 @@
+{
+  "name": "application-zkp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "copyfiles -f node_modules/snarkjs/build/snarkjs.min.js public/ && next dev",
+    "build": "echo 'Copying snarkjs.min.js...' && copyfiles -f node_modules/snarkjs/build/snarkjs.min.js public/ && echo 'snarkjs.min.js copied successfully' && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "vercel-dev": "copyfiles -f node_modules/snarkjs/build/snarkjs.min.js public/ && vercel dev",
+    "generate-deterministic-hashes": "ts-node-transpile-only scripts/generate_deterministic_hashes.ts",
+    "generate-random-hashes": "ts-node-transpile-only scripts/generate_random_hashes.ts",
+    "generate-circuit-constants": "ts-node-transpile-only scripts/generate_circuit_constants.ts",
+    "print-constants": "ts-node-transpile-only scripts/logBigIntArray.ts"
+  },
+  "dependencies": {
+    "@types/node": "20.5.9",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.15",
+    "circomlib": "^2.0.5",
+    "circomlibjs": "^0.1.7",
+    "copyfiles": "^2.4.1",
+    "eslint": "8.48.0",
+    "eslint-config-next": "13.4.19",
+    "font-awesome": "^4.7.0",
+    "framer-motion": "^10.16.4",
+    "next": "13.4.19",
+    "postcss": "8.4.29",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "snarkjs": "^0.7.0",
+    "tailwindcss": "3.3.3",
+    "ts-node": "^10.9.1",
+    "typescript": "5.2.2"
+  }
+}
