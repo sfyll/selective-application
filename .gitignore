@@ -41,7 +41,6 @@ sandbox
 **/.DS_STORE
 build/
 zkFiles/
-src/secrets/*
-secrets/*
-!src/secrets/example_username_at_org.txt
-!secrets/example_username_at_org.txt
+src/secrets/username_at_org.txt
+src/secrets/html*
+!src/secrets/html/example_0.html
