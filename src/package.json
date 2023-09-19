@@ -11,7 +11,7 @@
     "generate-deterministic-hashes": "ts-node-transpile-only scripts/generate_deterministic_hashes.ts",
     "generate-random-hashes": "ts-node-transpile-only scripts/generate_random_hashes.ts",
     "generate-circuit-constants": "ts-node-transpile-only scripts/generate_circuit_constants.ts",
-    "print-constants": "ts-node-transpile-only scripts/logBigIntArray.ts"
+    "full-set-up": "npm install && npm run generate-circuit-constants && cd ../circuit/ && ./build_circuit.sh && cd ../src/ && npm run build"
   },
   "dependencies": {
     "@types/node": "20.5.9",
